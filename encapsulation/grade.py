@@ -1,8 +1,5 @@
-import threading
-
-
 class Grade:
-    def setGrade(self, kor, eng, math):
+    def __init__(self, kor, eng, math):
         self.kor = kor
         self.eng = eng
         self.math = math
@@ -13,8 +10,31 @@ class Grade:
     def avg(self):
         return self.sum() / 3
 
-if __name__ == '__main__':
-    g = Grade()
-    g.setGrade(80, 90, 100)
-    print(g.sum())
-    print(g.avg())
+    def get_grade(self):
+        score = int(self.avg())
+        grade = ''
+        if score >= 90:
+            grade ='A학점'
+        elif score >= 80:
+            grade ='B학점'
+        elif score >= 70:
+            grade ='C학점'
+        elif score >= 60:
+            grade ='D학점'
+        elif score >= 50:
+            grade ='E학점'
+        else:
+            grade ='F학점'
+
+        return grade
+
+
+    @staticmethod
+    def main():
+        g = Grade()
+        g.get_grade(int(input('국어점수: ')), int(input('영어점수: ')), int(input('수학점수: ')))
+        print(f'총점: {g.sum()}')
+        print(f'평균: {g.avg()}')
+        print(f'학점: {g.get_grade()}')
+
+Grade.main()

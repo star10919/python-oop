@@ -1,4 +1,17 @@
-class Calculator():
+def add_function(first, second):
+    return first + second
+
+def sub_function(first, second):
+    return first - second
+
+def mul_function(first, second):
+    return first * second
+
+def div_function(first, second):
+    return first / second
+
+class Calculator:
+
     def setdata(self, first, second):
         self.first = first
         self.second = second
