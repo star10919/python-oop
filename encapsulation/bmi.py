@@ -4,9 +4,9 @@ class Bmi(object):
         self.weight = weight
 
     def bmiindex(self):
-        return self.weight / self.height ** 2 / 10000
+        return self.weight / self.height ** 2 * 10000
 
-    def bmiindex(self):
+    def bmiinde2(self):
         score = int(self.bmiindex())
         index = ''
         if score >= 35:
@@ -26,8 +26,8 @@ class Bmi(object):
 
     @staticmethod
     def main():
-        b = Bmi(int(input('키를 입력하세요')), int(input('체중을 입력하세요')))
+        b = Bmi(int(input('키(cm) : ')), int(input('체중(kg) : ')))
         print(f'체지방 지수 : {b.bmiindex()}')
-
+        print(f'상태 : {b.bmiinde2()}')
 
 Bmi.main()

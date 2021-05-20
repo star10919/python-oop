@@ -1,4 +1,4 @@
-class Grade:
+class Grade(object):
     def __init__(self, kor, eng, math):
         self.kor = kor
         self.eng = eng
@@ -12,7 +12,6 @@ class Grade:
 
     def get_grade(self):
         score = int(self.avg())
-        grade = ''
         if score >= 90:
             grade ='A학점'
         elif score >= 80:
@@ -36,5 +35,3 @@ class Grade:
         print(f'총점: {g.sum()}')
         print(f'평균: {g.avg()}')
         print(f'학점: {g.get_grade()}')
-
-Grade.main()
