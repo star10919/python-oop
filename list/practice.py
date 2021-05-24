@@ -24,8 +24,11 @@ class Stock(object):
                     print(i.get_stock())
             elif menu == '3':
                 del_name = input('삭제할 종목명 ')
+                # 입력받은 종목명이랑 리스트의 종목명이랑 같은 게 있는지 비교
                 for i, j in enumerate(ls):
                     if j.name == del_name:
+                        #삭제
+
                         del ls[i]
             elif menu == '4':
                 edit_name = input('수정할 종목명 ')

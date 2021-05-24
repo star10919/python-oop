@@ -35,7 +35,9 @@ class Account(object):
 
     @staticmethod
     def main():
+
         ls = []
+
         while 1:
             menu = input('0.종료 1.계좌개설 2.계좌목록 3.입금 4.출금 5.계좌탈퇴 ')
             if menu == '0':
@@ -47,6 +49,7 @@ class Account(object):
             elif menu == '2':
                 for i in ls:
                     print(i.to_string())
+
             elif menu == '3':
                 account_number = input('입금할 계좌번호')
                 money = input('입금액 입력바랍니다')
